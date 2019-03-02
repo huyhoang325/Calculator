@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<table>
+    <tr>
+        <td colspan="2"> <input id="Result" type="number"/></td>
+        <td colspan="5"> <input id="Result1" type="number"/></td>
+    </tr>
+    <tr>
+        <td><input type = "button" value ="Addition(+)" onclick="cong()"></td>
+        <td><input type = "button" value ="Subtraction(-)" onclick="tru()"></td>
+        <td><input type = "button" value ="Mutiplication(*)" onclick="nhan()"></td>
+        <td><input type = "button" value ="Division(/)" onclick="chia()"></td>
+    </tr>
+</table>
+<p id="demo"></p>
+<script>
+    function cong() {
+        let ketqua = parseInt(Result.value) + parseInt(Result1.value);
+        let text = "Result Addition: " + ketqua;
+        document.getElementById("demo").innerHTML = text;
+    }
+    function tru() {
+        let ketqua = parseInt(Result.value) - parseInt(Result1.value);
+        let text = "Result Subtraction: " + ketqua;
+        document.getElementById("demo").innerHTML = text;
+    }
+    function nhan() {
+        let ketqua = parseInt(Result.value) * parseInt(Result1.value);
+        let text = "Result Mutiplication: " + ketqua;
+        document.getElementById("demo").innerHTML = text;    }
+    function chia() {
+        let ketqua = parseInt(Result.value) / parseInt(Result1.value);
+        let text = "Result Division: " + ketqua;
+        document.getElementById("demo").innerHTML = text;    }
+</script>
+</body>
+</html>
